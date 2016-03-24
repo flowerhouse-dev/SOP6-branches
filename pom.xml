@@ -178,7 +178,7 @@
                         <groupId>org.glassfish.deployment</groupId>
                         <artifactId>deployment-client</artifactId>
                         <version>3.2-b06</version>
-                        <type>ejb</type>
+                        <type>war</type>
                     </dependency>
                 </dependencies>
             </plugin>
