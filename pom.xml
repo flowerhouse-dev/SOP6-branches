@@ -166,7 +166,7 @@
                         <deployable>
                             <groupId>${project.groupId}</groupId>
                             <artifactId>${project.artifactId}</artifactId>
-                            <type>war</type>
+                            <!--<type>war</type>-->
                             <properties>
                                 <context>/${project.artifactId}</context>
                             </properties>
