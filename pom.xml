@@ -181,7 +181,7 @@
                         
 <!--                        <artifactId>gameoflife</artifactId>
                         <version>SNAPSHOT</version>-->
-                        <type>war</type>
+                        <!--<type>war</type>-->
                         
                         <!--<type>war</type>-->
                     </dependency>
