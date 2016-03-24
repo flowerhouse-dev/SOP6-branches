@@ -175,12 +175,12 @@
                 </configuration>
                 <dependencies>
                     <dependency>
-                        <groupId>org.glassfish.deployment</groupId>
-<!--                        <artifactId>deployment-client</artifactId>
-                        <version>3.2-b06</version>-->
+                        <!--<groupId>org.glassfish.deployment</groupId>-->
+                        <artifactId>deployment-client</artifactId>
+                        <version>3.2-b06</version>
                         
-                        <artifactId>gameoflife</artifactId>
-                        <version>1.0-SNAPSHOT</version>
+<!--                        <artifactId>gameoflife</artifactId>
+                        <version>SNAPSHOT</version>-->
                         <type>war</type>
                         
                         <!--<type>war</type>-->
