@@ -147,47 +147,39 @@
                 <groupId>org.codehaus.cargo</groupId>
                 <artifactId>cargo-maven2-plugin</artifactId>
                 <version>1.3.3</version>
+                <configuration>
+                    <container>
+                        <containerId>glassfish4x</containerId>
+                        <type>remote</type>
+                    </container>
                     <configuration>
-                        <container>
-                            <containerId>glassfish4x</containerId>
-                            <type>remote</type>
-                            <!--<type>installed</type>
-                            <output>${glassfish.installDirectory}/glassfish/domains/${glassfish.domainName}/logs/server.log</output>-->
-                        </container>
-                        <configuration>
-                            <type>runtime</type>
-                                <properties>
-                                    <properties>
-                                        <cargo.hostname>localhost</cargo.hostname>
-                                        <cargo.remote.username>admin</cargo.remote.username>
-                                        <cargo.remote.password>admin</cargo.remote.password>
-                                        <cargo.glassfish.admin.port>4848</cargo.glassfish.admin.port>
-                                        <cargo.glassfish.domain.name>domain1</cargo.glassfish.domain.name>
-                                    </properties>
-<!--                                    <cargo.glassfish.domain.name>${glassfish.domainName}</cargo.glassfish.domain.name>
-                                    <cargo.remote.username>${glassfish.adminUser}</cargo.remote.username>
-                                    <cargo.remote.passwordFile>${glassfish.installDirectory}/admin.password</cargo.remote.passwordFile>-->
-                                    <!-- Maven sets java.home property to JRE but we want JDK -->
-                                </properties>
-                        </configuration>
-                        <deployables>
-                            <deployable>
-                                <groupId>${project.groupId}</groupId>
-                                <artifactId>${project.artifactId}</artifactId>
-                                <type>war</type>
-                                <properties>
-                                    <context>/${project.artifactId}</context>
-                                </properties>
-                            </deployable>
-                        </deployables>
+                        <type>runtime</type>
+                        <properties>
+                            <cargo.hostname>localhost</cargo.hostname>
+                            <cargo.remote.username>admin</cargo.remote.username>
+                            <cargo.remote.password>admin</cargo.remote.password>
+                            <cargo.glassfish.admin.port>4848</cargo.glassfish.admin.port>
+                            <cargo.glassfish.domain.name>domain1</cargo.glassfish.domain.name>
+                        </properties>
                     </configuration>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.glassfish.deployment</groupId>
-                            <artifactId>deployment-client</artifactId>
-                            <version>3.2-b06</version>
-                        </dependency>
-                    </dependencies>
+                    <deployables>
+                        <deployable>
+                            <groupId>${project.groupId}</groupId>
+                            <artifactId>${project.artifactId}</artifactId>
+                            <type>war</type>
+                            <properties>
+                                <context>/${project.artifactId}</context>
+                            </properties>
+                        </deployable>
+                    </deployables>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.glassfish.deployment</groupId>
+                        <artifactId>deployment-client</artifactId>
+                        <version>3.2-b06</version>
+                    </dependency>
+                </dependencies>
             </plugin>
 
         </plugins>
