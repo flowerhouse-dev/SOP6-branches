@@ -164,8 +164,8 @@
                     </configuration>
                     <deployables>
                         <deployable>
-                            <groupId>${project.groupId}</groupId>
-                            <artifactId>${project.artifactId}</artifactId>
+                            <groupId>com.wakaleo.gameoflife</groupId>
+                            <artifactId>gameoflife-web</artifactId>
                             <type>war</type>
                             <properties>
                                 <context>${cargo.domain}</context>
