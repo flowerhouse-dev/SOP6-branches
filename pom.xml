@@ -158,7 +158,7 @@
                             <cargo.hostname>localhost</cargo.hostname>
                             <cargo.remote.username>admin</cargo.remote.username>
                             <cargo.remote.password>admin</cargo.remote.password>
-                            <cargo.remote.port>8080</cargo.remote.port>
+                            <cargo.remote.port>4848</cargo.remote.port>
                             <cargo.glassfish.domain.name>${cargo.domain}</cargo.glassfish.domain.name>
                         </properties>
                     </configuration>
