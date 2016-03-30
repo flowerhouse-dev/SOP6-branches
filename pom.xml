@@ -164,25 +164,29 @@
                     </configuration>
                     <deployables>
                         <deployable>
-                            <groupId>com.wakaleo.gameoflife</groupId>
-                            <artifactId>gameoflife-web</artifactId>
-                            <type>war</type>
-                            <properties>
-                                <context>${cargo.domain}</context>
-                            </properties>
-<!--                            <groupId>gameoflife-group</groupId>
-                            <artifactId>gameoflife-artifact</artifactId>
                             <groupId>${project.groupId}</groupId>
                             <artifactId>${project.artifactId}</artifactId>
                             <type>war</type>
                             <properties>
-                                <context>/${project.artifactId}</context>
+                                <context>${cargo.domain}</context>
+                            </properties>
+<!--                            <groupId>com.wakaleo.gameoflife</groupId>
+                            <artifactId>gameoflife-web</artifactId>
+                            <type>war</type>
+                            <properties>
+                                <context>${cargo.domain}</context>
                             </properties>-->
                         </deployable>
                     </deployables>
                 </configuration>
                 <dependencies>
                     <dependency>
+                        
+<!--                        <groupId>com.wakaleo.gameoflife</groupId>
+                        <artifactId>gameoflife-web</artifactId>
+                        <version>1.0-SNAPSHOT</version>
+                        <type>war</type>-->
+
                         <groupId>org.glassfish.deployment</groupId>
                         <artifactId>deployment-client</artifactId>
                         <version>3.2-b06</version>
