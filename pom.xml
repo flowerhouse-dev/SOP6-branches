@@ -40,7 +40,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.11</version>
                 <configuration>
-                    <skip>true</skip>
+                    <skip>false</skip>
                 </configuration>
                 <executions>
                     <execution>
@@ -142,7 +142,7 @@
                     <api_hoster>app.jelastic.servint.net</api_hoster>
                 </configuration>
             </plugin>
-            
+
             <plugin>
                 <groupId>org.codehaus.cargo</groupId>
                 <artifactId>cargo-maven2-plugin</artifactId>
@@ -156,10 +156,10 @@
                         <type>runtime</type>
                         <properties>
                             <cargo.hostname>localhost</cargo.hostname>
-                            <cargo.remote.username>admin</cargo.remote.username>
-                            <cargo.remote.password>admin</cargo.remote.password>
-                            <cargo.glassfish.admin.port>4848</cargo.glassfish.admin.port>
-                            <cargo.glassfish.domain.name>domain1</cargo.glassfish.domain.name>
+                            <cargo.remote.username></cargo.remote.username>
+                            <cargo.remote.password></cargo.remote.password>
+                            <cargo.remote.port>8080</cargo.remote.port>
+                            <cargo.glassfish.domain.name>${cargo.domain}</cargo.glassfish.domain.name>
                         </properties>
                     </configuration>
                     <deployables>
@@ -170,36 +170,17 @@
                             <properties>
                                 <context>${cargo.domain}</context>
                             </properties>
-<!--                            <groupId>com.wakaleo.gameoflife</groupId>
-                            <artifactId>gameoflife-web</artifactId>
-                            <type>war</type>
-                            <properties>
-                                <context>${cargo.domain}</context>
-                            </properties>-->
                         </deployable>
                     </deployables>
                 </configuration>
                 <dependencies>
                     <dependency>
-                        
-<!--                        <groupId>com.wakaleo.gameoflife</groupId>
-                        <artifactId>gameoflife-web</artifactId>
-                        <version>1.0-SNAPSHOT</version>
-                        <type>war</type>-->
-
                         <groupId>org.glassfish.deployment</groupId>
                         <artifactId>deployment-client</artifactId>
                         <version>3.2-b06</version>
-                        
-<!--                        <artifactId>gameoflife</artifactId>
-                        <version>SNAPSHOT</version>-->
-                        <!--<type>war</type>-->
-                        
-                        <!--<type>war</type>-->
                     </dependency>
                 </dependencies>
             </plugin>
-
         </plugins>
 
         <pluginManagement>
@@ -282,18 +263,18 @@
                 <plugins>
                     <!-- CHECKSTYLE -->
                     <!--<plugin>-->
-                        <!--<artifactId>maven-checkstyle-plugin</artifactId>-->
-                        <!--<version>2.9.1</version>-->
-                        <!--<dependencies>-->
-                            <!--<dependency>-->
-                                <!--<groupId>com.wakaleo.gameoflife</groupId>-->
-                                <!--<artifactId>gameoflife-build</artifactId>-->
-                                <!--<version>${project.version}</version>-->
-                            <!--</dependency>-->
-                        <!--</dependencies>-->
-                        <!--<configuration>-->
-                            <!--<configLocation>custom-checkstyle.xml</configLocation>-->
-                        <!--</configuration>-->
+                    <!--<artifactId>maven-checkstyle-plugin</artifactId>-->
+                    <!--<version>2.9.1</version>-->
+                    <!--<dependencies>-->
+                    <!--<dependency>-->
+                    <!--<groupId>com.wakaleo.gameoflife</groupId>-->
+                    <!--<artifactId>gameoflife-build</artifactId>-->
+                    <!--<version>${project.version}</version>-->
+                    <!--</dependency>-->
+                    <!--</dependencies>-->
+                    <!--<configuration>-->
+                    <!--<configLocation>custom-checkstyle.xml</configLocation>-->
+                    <!--</configuration>-->
                     <!--</plugin>-->
 
                     <!-- PMD -->
