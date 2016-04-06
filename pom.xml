@@ -231,6 +231,7 @@
             <type>war</type>
             <scope>runtime</scope>
             <classifier>classes</classifier>
+            <type>jar</type>
         </dependency>-->
 <!--        <dependency>
             <groupId>com.wakaleo.gameoflife</groupId>
